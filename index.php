@@ -1,31 +1,41 @@
 <?php 
 
-echo 'PHP VARIABLES <br>';
-//string
-$name = 'Christian';
+//arithmetic operators
+// + - * / ** %
 
-//integer
-$age = 25;
+$x =10;
+$y = 5;
+$z = null;
+// $z = $x + $y;
+// $z = $x - $y;
+// $z = $x * $y;
+// $z = $x / $y;
+// $z = $x  ** $y;
+// $z = $x  % $y;
+echo "{$z}" ;
 
-//float
-$price = 5.99;
+//increment and decrement operators
 
-//boolean
-$status = true;
+// $counter = 0;
+// $counter = $counter + 1;
+// $counter = $counter - 1;
+// $counter--;
 
-//array
-$cars =["BMW","Mercede","suzuki"];
+// $counter = 10;
 
-
-echo "Hello my name is {$name} <br>";
-echo "age is {$age} <br>";
-echo "and i buy clothes that price is \${$price}  <br>";
-echo "Online status is: {$status}   <br>";
-echo "Type of Cars: {$cars[1]} <br>";
+// $counter-=3;
+// echo "{$counter}";
 
 
-// use var_dump to know what type of variable
-var_dump($status);
+// Operator precedence
+// ()
+// **
+// * / %
+// + -
+
+$total = 1 + 2 - 3 * 4 / 5 ** 6;
+
+echo $total;
 
 ?>
 
@@ -34,7 +44,7 @@ var_dump($status);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP Variables</title>
+    <title>PHP Arithmetic</title>
 </head>
 <body>
     
