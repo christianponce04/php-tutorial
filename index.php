@@ -14,7 +14,7 @@ $price = 5.99;
 $status = true;
 
 //array
-$cars =["BMW","Mercedez","Ferrari"];
+$cars =["BMW","Mercede","suzuki"];
 
 
 echo "Hello my name is {$name} <br>";
