@@ -1,5 +1,17 @@
 <?php 
 
-echo 'hello world'
+echo 'hello world, php first echo';
 
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP tutorial</title>
+</head>
+<body>
+    
+</body>
+</html>
