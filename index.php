@@ -1,6 +1,31 @@
 <?php 
 
-echo 'hello world, php first echo';
+echo 'PHP VARIABLES <br>';
+//string
+$name = 'christian';
+
+//integer
+$age = 24;
+
+//float
+$price = 4.99;
+
+//boolean
+$status = true;
+
+//array
+$cars =["BMW","Toyota","suzuki"];
+
+
+echo "Hello my name is {$name} <br>";
+echo "age is {$age} <br>";
+echo "and i buy clothes that price is \${$price}  <br>";
+echo "Online status is: {$status}   <br>";
+echo "Type of Cars: {$cars[1]} <br>";
+
+
+// use var_dump to know what type of variable
+var_dump($status);
 
 ?>
 
@@ -9,7 +34,7 @@ echo 'hello world, php first echo';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP tutorial</title>
+    <title>PHP Variables</title>
 </head>
 <body>
     
