@@ -2,19 +2,19 @@
 
 echo 'PHP VARIABLES <br>';
 //string
-$name = 'christian';
+$name = 'Christian';
 
 //integer
-$age = 24;
+$age = 25;
 
 //float
-$price = 4.99;
+$price = 5.99;
 
 //boolean
 $status = true;
 
 //array
-$cars =["BMW","Toyota","suzuki"];
+$cars =["BMW","Mercedez","Ferrari"];
 
 
 echo "Hello my name is {$name} <br>";
