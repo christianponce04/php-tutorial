@@ -20,7 +20,7 @@
 
 <?php 
 
-echo   "{$_GET["username"]} </br> ";
+echo   "{$_GET["username"]} ";
 echo   $_GET["password"];
 
 ?>
