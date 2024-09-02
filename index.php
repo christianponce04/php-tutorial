@@ -17,19 +17,60 @@
 </html>
 
 <?php 
+    // logical operators
 
-    $age = $_POST["age"];
+//    $age = $_POST["age"];
 
-    if($age>=18){
-        echo "allowed to come in, age is {$age}";
-    }
-    else if($age <=0){
-        echo "invalid input";
-    }
-    else{
-        echo "Not Allowed still minor, age is {$age}";
-    }
-   
+    // if($age >= 18 && $age <= 60){
+    //     echo "can vote";
+    // }
+    // else{
+    //     echo "cant vote";
+    // }
+
+
+
+    // if( $temp >=0 && $temp <= 50){
+    // echo "Temperature is good";
+    // }
+    // else{
+    //     echo "Temperature is bad";
+    // } 
+
+    // $temp = $_POST["temp"];
+
+    // if( $temp < 0 || $temp > 50){
+    // echo "Temperature is bad";
+    // }
+    // else{
+    //     echo "Temperature is good";
+    // } 
+
+
+    // $temp = $_POST["temp"];
+    // $cloudy = false;
+    // if(!$cloudy){
+    //     echo "weather is cloudy";
+    // }
+    
+    // else{
+    //     echo "weather is bad";
+    // }
+
+
+    // $child = true;
+    // $senior = false;
+    // $ticket = null;
+
+    // if(!$child && $senior){
+    //     $ticket = 15;
+    // }
+    // else{
+    //     $ticket =30;
+    // }
+
+    // echo "the ticket price is \${$ticket}";
+
 
 
 ?>
