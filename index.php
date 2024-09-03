@@ -3,74 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>If Else Condition</title>
+    <title>Switch Condition</title>
 </head>
 <body>
 
     <form action="index.php" method="post">
 
-    <input type="text" name="age" id="" placeholder="Enter Age">
-    <input type="submit" value="submit">
+    <input type="text" name="grade" id="" placeholder="Enter Grade">
+        <input type="submit" value="Submit">
     </form>
     
 </body>
 </html>
 
 <?php 
-    // logical operators
 
-//    $age = $_POST["age"];
+$grade = $_POST["grade"];
 
-    // if($age >= 18 && $age <= 60){
-    //     echo "can vote";
-    // }
-    // else{
-    //     echo "cant vote";
-    // }
+switch($grade){
 
+    case ($grade == "A" || $grade == "a"):
+        echo "doing great";
+        break;
 
+     case ($grade == "B" || $grade == "b"):
+            echo "doing good";
+            break;
 
-    // if( $temp >=0 && $temp <= 50){
-    // echo "Temperature is good";
-    // }
-    // else{
-    //     echo "Temperature is bad";
-    // } 
+     case ($grade == "C" || $grade == "c"):
+             echo "doing poorly";
+            break;
 
-    // $temp = $_POST["temp"];
+                
+       case ($grade == "D" || $grade == "d"):
+             echo "failed";
+             break;
 
-    // if( $temp < 0 || $temp > 50){
-    // echo "Temperature is bad";
-    // }
-    // else{
-    //     echo "Temperature is good";
-    // } 
+        default:
+            echo "invalid input please try again";
+            break;
 
-
-    // $temp = $_POST["temp"];
-    // $cloudy = false;
-    // if(!$cloudy){
-    //     echo "weather is cloudy";
-    // }
-    
-    // else{
-    //     echo "weather is bad";
-    // }
+}
 
 
-    // $child = true;
-    // $senior = false;
-    // $ticket = null;
+// $grade = $_POST["grade"];
 
-    // if(!$child && $senior){
-    //     $ticket = 15;
-    // }
-    // else{
-    //     $ticket =30;
-    // }
+// switch ($grade) {
+//     case ($grade >=81 && $grade <= 85):
+//         echo "You did great";
+//         break;
+//     case ($grade >=75 && $grade <= 80 ) :
+//        echo "You did good";
+//          break;
 
-    // echo "the ticket price is \${$ticket}";
+//    case ($grade >=70 && $grade <= 74  )  :
+//         echo "You did okay";
+//         break;
 
+//   case ($grade >=65 && $grade <= 69  )  :
 
+//        echo "You did poorly";
+//        break;
+
+//     default:
+//     echo "Invalid Input please try again";
+//         break;
+// }
 
 ?>
