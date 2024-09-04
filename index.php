@@ -3,28 +3,44 @@
 
 <?php
 
-$foods = array("banana","watermelon","apple","orange");
 
-    array_push($foods ,"kiwi"); // add 
-    array_shift($foods); // remove first element
-    array_pop($foods); //remove last element 
-    echo count($foods) ."</br>" ;
+   // array_shift($countrys);
+    // array_pop($countrys);
+    // $countrys["USA"]="Las Vegas";
+    // $countrys["China"]="Beijing";
 
-    // reverse an array
+    //   $keys = array_keys($countrys);
+    //   $values =  array_values($countrys);
 
-    $reverse_array = array_reverse($foods);
+//    foreach($countrys as $key => $value){
+//      echo " {$key} = {$value} </br>";
+//    }         
 
+    $countrys = array("USA" => "Washington",
+                    "India" => "New Delhi",
+                    "Philippines" =>"Manila",
+                    "Korea"=>"Seoul");
 
-foreach ($foods as $food){
-    echo $food . "</br>";
-}   
-
-foreach ($reverse_array as $food){
-    echo $food . "</br>";
-}   
-
+    $capital = $countrys[$_POST["capital"]];
+    
+    echo "the capital city is {$capital}";
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Associative Arrays</title>
+</head>
+<body>
 
+    <form action="index.php" method="POST">
+        <input type="text" name="capital" id="" placeholder="Enter Country">
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
 
 
 
