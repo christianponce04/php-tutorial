@@ -9,13 +9,14 @@
 
     <body>
 
-
     <form action="index.php" method="post">
 
-        <input type="radio" name="payment" id="" value="Gcash"> <label for="">Gcash</label> </br>
-        <input type="radio" name="payment" id="" value="Paypal" > <label for="">Paypal</label> </br>
-        <input type="radio" name="payment" id="" value="Bank"> <label for="">Bank</label> </br>
-        <input type="submit" name="submit" value="Submit">
+        <input type="checkbox" name="pizza" id="" value="Pizza">Pizza <br>
+        <input type="checkbox" name="burger" id="" value="Burger">Burger <br>
+        <input type="checkbox" name="fries" id="" value="Fries">Fries <br>
+        <input type="checkbox" name="salad" id="" value="Salad">Salad <br>
+        <input type="submit"  value="submit" name="submit">
+
     </form>
 
     </body>
@@ -23,46 +24,51 @@
 </html>
 
 <?php 
-
- 
-
+    
     if(isset($_POST["submit"])){
 
- 
 
-        if(isset($_POST["payment"])){
-            $payment = $_POST["payment"];
-     
-          echo "You selected paymenit is {$payment} ";
-        }
-        else{
-            echo "Please select payment";
+        if(isset($_POST["pizza"])){
+            echo "you like pizza" . "<br>";
         }
 
-        // switch($payment){
+         else if (empty($_POST["fries"]) && empty($_POST["salad"]) && empty($_POST["burger"]) && empty($_POST["burger"]) ){
             
-        //     case $payment == "Gcash":
-            
-        //         echo "you selected payment is gcash";
-        //         break;
-
-        //     case $payment == "Paypal":
-            
-        //          echo "you selected payment is Paypal";
-        //          break;
-
-        //    case $payment == "Bank":
-            
-        //          echo "you selected payment is Bank";
-        //         break;
-
-        //     default:
-        //         echo"please select payment";
-        //         break;
-
-        // }
-     
+        echo "you dont like pizza,fries,salad and burger";
+      
+      }
+        
     }
+
+
+
+    // if(isset($_POST["submit"])){
+     
+    //     if(isset($_POST["pizza"]))
+    //     {
+    //         echo "you like pizza";
+    //     }
+    //      if(isset($_POST["burger"]))
+    //     {
+    //         echo" you like burger";
+    //     }
+
+    //      if(isset($_POST["fries"]))
+    //     {
+    //         echo" you like fries";
+    //     }
+
+    //      if(isset($_POST["salad"]))
+    //     {
+    //         echo" you like salad";
+    //     }
+
+    //     else{
+    //         echo "Please select foods";
+    //     }
+
+    // }
+
 
 ?>
 
