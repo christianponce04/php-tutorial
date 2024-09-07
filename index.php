@@ -1,39 +1,38 @@
 
 <?php 
+ 
+    $first_num = empty($_POST["first_num"]) ?  null :  $_POST["first_num"] ;
+    $sec_num = empty($_POST["second_num"]) ? null : $_POST["second_num"];
 
-    $first_num = $_POST["first_num"];
-    $sec_num = $_POST["second_num"];
+    $result = empty($_POST["result"]) ?  null :  $_POST["result"] ;
+    $result = empty($_POST["result"]) ?  null :  $_POST["result"] ;
 
-    $result= $_POST["result"];
-
+    
     $operator= $_POST["operator"];
 
     switch($operator){
         
-        case $operator == 'Add':
+          case $operator == 'Add':
         
-            $result = add($first_num,$sec_num);
+               $result = add($first_num,$sec_num);
             break;
         
-        case $operator == 'Subtract':
-        
-            $result = subtract($first_num,$sec_num);
+          case $operator == 'Subtract':
+               $result = subtract($first_num,$sec_num);
                 break;
 
-         case $operator == 'Multiply':
-        
+          case $operator == 'Multiply':
             $result = multiply($first_num,$sec_num);
            break;
 
-
-           case $operator == 'Division':
-        
-            $result = division($first_num,$sec_num);
+          case $operator == 'Division':
+            
+             $result = division($first_num,$sec_num);
               break;
 
-          default:
-        echo "invalid input";
-        break;
+            default:
+            echo "invalid input";
+            break;
         
     }
 
