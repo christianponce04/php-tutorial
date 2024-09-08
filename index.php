@@ -1,72 +1,41 @@
+<?php
 
-<?php 
- 
-    $first_num = empty($_POST["first_num"]) ?  null :  $_POST["first_num"] ;
-    $sec_num = empty($_POST["second_num"]) ? null : $_POST["second_num"];
+    $username = "Christian";
 
-    $result = empty($_POST["result"]) ?  null :  $_POST["result"] ;
-    $result = empty($_POST["result"]) ?  null :  $_POST["result"] ;
+    $phone = "123-456-7890";
 
-    
-    $operator= $_POST["operator"];
 
-    switch($operator){
-        
-          case $operator == 'Add':
-        
-               $result = add($first_num,$sec_num);
-            break;
-        
-          case $operator == 'Subtract':
-               $result = subtract($first_num,$sec_num);
-                break;
 
-          case $operator == 'Multiply':
-            $result = multiply($first_num,$sec_num);
-           break;
+    //$username = strtolower($username);
 
-          case $operator == 'Division':
-            
-             $result = division($first_num,$sec_num);
-              break;
+    //$username = strtoupper($username);
 
-            default:
-            echo "invalid input";
-            break;
-        
-    }
+    //$username = trim($username);
 
-    function add($a,$b){ return $result  = $a + $b ; }
-    function subtract($a,$b){ return $result  = $a - $b ; }
-    function multiply($a,$b){ return $result  = $a * $b ; }
-    function division($a,$b){ return $result  = $a / $b ; }
+    //$username = str_pad($username, 20, "0");
 
+    //$phone = str_replace("-", "", $phone);
+
+    //$username = strrev($username);
+
+    //$username = str_shuffle($username);
+
+    //$equals = strcmp($username, "Bro Code");
+
+    //$count = strlen($phone);
+
+    //$index = strpos($phone, "-");
+
+    //$firstname = substr($username, 0, 3);
+
+    //$lastname = substr($username, 4);
+
+    //$fullname = explode(" ", $username);
+
+    //$username = implode("-", $username);
+
+
+
+    echo $username;
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>function</title>
-</head>
-<body>
-
-    <form action="index.php" method="post">
-
-        <input type="number" name="first_num" id="" placeholder="Enter First number" value="<?php echo $first_num ?>" >
-        <input type="number" name="second_num" id="" placeholder="Enter Second number" value="<?php echo $sec_num ?>">
-        <input type="number" name="result" id="" readonly  value="<?php echo $result ?>">
-
-        <input type="submit" value="Add" name="operator">
-        <input type="submit" value="Subtract" name="operator">
-        <input type="submit" value="Multiply" name="operator">
-        <input type="submit" value="Division" name="operator">
-
-    </form>
-    
-</body>
-</html>
-
-
