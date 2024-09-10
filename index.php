@@ -18,17 +18,13 @@
 
     <form action="index.php" method="post">
 
-        username:<br>
+      <br>
 
-        <input type="text" name="username"><br>
+        <input type="text" name="username" placeholder="username"><br>
 
-        age:<br>
+        <input type="text" name="age" placeholder="age"><br>
 
-        <input type="text" name="age"><br>
-
-        email:<br>
-
-        <input type="text" name="email"><br>
+        <input type="text" name="email" placeholder="Email"><br>
 
         <input type="submit" name="login" value="login"><br>
 
@@ -46,10 +42,9 @@
         $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
         $age = filter_input(INPUT_POST, "age", FILTER_SANITIZE_NUMBER_INT);
         $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
-
         $age = filter_input(INPUT_POST, "age", FILTER_VALIDATE_INT);
-
         $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
+        
     }
 
 ?>
