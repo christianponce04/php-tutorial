@@ -1,50 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercises 4 BMI</title>
-</head>
-
-
+<table width="400px" cellspacing="0px" cellpadding="0px" border="1px">
 <?php
-
-    $weight = $_POST["weight"];
-    $height = $_POST["height"];
-    
-    
-    $result = $weight / ($height/100)**2;
-    $result = round($result,2);
-
-    if($result >= 30){
-        echo "Weight is{$result}  and you're obese";
-    }
-    else if($result >=25 && $result <=29.9){
-        echo "weight is  {$result} and you're overweight ";
-    }
-    else if($result >=18.5 && $result <= 24.9){
-        echo "weight is {$result}  and you're normal";
-    }
-    else{
-        echo "weight is {$result} and you're underweight";
-    }
-
+for($row=1;$row<=8;$row++)
+{
+	echo "<tr>";
+	for($column=1;$column<=8;$column++)
+	{
+		$total=$row+$column;
+		if($total%2==0)
+		{
+			echo "<td height=35px width=30px bgcolor=#FFFFFF></td>";
+		}
+		else
+		{
+			echo "<td height=35px width=30px bgcolor=#000000></td>";
+		}
+	}
+	echo "</tr>";
+}
 ?>
-<body>
-
- <!-- Write a BMI Calculator -->
-
-    <form action="index.php" method="post">
-    <input type="number" name="height" id="" placeholder="Enter Height in CM" value="<?php echo $height ?>" >
-    <input type="number" name="weight" id="" placeholder="Enter Weight in KG" value="<?php echo $weight ?>" >
-    <input type="text" name="" id="" readonly placholder="result" value="<?php echo $result ?>">
-    <input type="submit" value="Submit">
-
-    </form>
-
-</body>
-</html>
-
-
-
-
+</table>
