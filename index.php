@@ -1,50 +1,21 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Document</title>
-
-</head>
-
-<body>
-
-    <form action="index.php" method="post">
-
-      <br>
-
-        <input type="text" name="username" placeholder="username"><br>
-
-        <input type="text" name="age" placeholder="age"><br>
-
-        <input type="text" name="email" placeholder="Email"><br>
-
-        <input type="submit" name="login" value="login"><br>
-
-    </form>
-
-</body>
-
-</html>
-
+<table width="400px" cellspacing="0px" cellpadding="0px" border="1px">
 <?php
-
-    if(isset($_POST["login"])){
-
-
-        $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
-        $age = filter_input(INPUT_POST, "age", FILTER_SANITIZE_NUMBER_INT);
-        $email = filter_input(INPUT_POST, "email", FILTER_SANITIZE_EMAIL);
-        $age = filter_input(INPUT_POST, "age", FILTER_VALIDATE_INT);
-        $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
-        
-    }
-
+for($row=1;$row<=8;$row++)
+{
+	echo "<tr>";
+	for($column=1;$column<=8;$column++)
+	{
+		$total=$row+$column;
+		if($total%2==0)
+		{
+			echo "<td height=35px width=30px bgcolor=#FFFFFF></td>";
+		}
+		else
+		{
+			echo "<td height=35px width=30px bgcolor=#000000></td>";
+		}
+	}
+	echo "</tr>";
+}
 ?>
+</table>
