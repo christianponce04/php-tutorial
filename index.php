@@ -1,65 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+<title>
+array to string
+</title>
 </head>
 <body>
-	
-
-<form action="index.php" method="post">
-
-<input type="text" name="username" id="" placeholder="Username">
-<input type="text" name="age" id="" placeholder="Age">
-<input type="text" name="email" id="" placeholder="Email">
-<input type="submit" value="Submit" name="submit">
-
-</form>
+	<form action="data.php" method="post">
+		Username: <input type="text" name="username" placeholder="enter name" required/><br/><br/>
+		Select your favourite colors:<br/>
+		Red<input type="checkbox" name="check_list[]" value="red"/><br/>
+		Blue<input type="checkbox" name="check_list[]" value="blue"/><br/>
+		Green<input type="checkbox" name="check_list[]" value="green"/><br/>
+		Yellow<input type="checkbox" name="check_list[]" value="yellow"/><br/>
+		Pink<input type="checkbox" name="check_list[]" value="pink"/><br/>
+		Black<input type="checkbox" name="check_list[]" value="black"/><br/>
+		White<input type="checkbox" name="check_list[]" value="white"/><br/><br/>
+		<input type="submit" name="submit" value="Submit"/><br/>
+	</form>
 </body>
 </html>
 
-<?php 
+Markup
 
-if(isset($_POST["submit"])){
-	// $username = $_POST["username"];
-
-// 	 $username = filter_input(INPUT_POST, "username",
-// 	 				FILTER_SANITIZE_SPECIAL_CHARS);
-// 	$age = filter_input(INPUT_POST,"age",
-// 					FILTER_SANITIZE_NUMBER_INT);
-// $email = filter_input(INPUT_POST, "email",
-// 					FILTER_SANITIZE_EMAIL);
-// 	echo $email;
-
-
-//validate
-
-// 	 if(isset($_POST["submit"])){
-// 	 	$age = filter_input(INPUT_POST,"age",FILTER_VALIDATE_INT);
-
-// 	 	if(empty($age)){
-// 	 		echo "invalid input";
-// 	 	}
-// 	 	else{
-// 	 		echo "your age is {$age}";
-// 	 	}
-// 	}
-// }
-
-	if(isset($_POST["submit"])){
-			$email = filter_input(INPUT_POST,"email",FILTER_VALIDATE_EMAIL);
-	
-			if(empty($email)){
-				echo "invalid input";
-			}
-			else{
-				echo "your email is {$email}";
-			}
-
-	}
+<?php
+if (isset($_POST['submit'])) {
+    if (!empty($_POST['check_list'])) {
+        // Counting number of checked checkboxes.
+        $checked_count = count($_POST['check_list']);
+        $name = $_POST['username'];
+        echo $name . " 's favourite colors are " . $checked_count . " option(s): <br/>";
+        // Loop to store and display values of individual checked checkbox.
+        foreach ($_POST['check_list'] as $selected) {
+            echo "<p>" . $selected . "</p>";
+        }
+    } else {
+        echo "<b>Please Select Atleast One Option.</b>";
+    }
 }
-
-?>
-
-
