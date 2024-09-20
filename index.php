@@ -1,22 +1,49 @@
-<?php
-// Function to test a given number using ternary operators
-function trinary_Test($n){
-    // Ternary operators used to check the value of $n and assign a corresponding message to $r
-    $r = $n > 30
-        ? "greater than 30"
-        : ($n > 20
-            ? "greater than 20"
-            : ($n > 10
-                ? "greater than 10"
-                : "Input a number at least greater than 10!"));
+<?php 
+session_start();
+?>
 
-    // Display the result with the input number
-    echo $n . " : " . $r . "\n";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Discussion</title>
+</head>
+
+<body>
+
+<h2>this is login page</h2>
+
+<form action="index.php" method="POST">
+    <input type="text" name="username" id="" placeholder="Username">
+    <input type="password" name="password" id="" placeholder="password">
+    <input type="submit" value="login" name="login">
+
+</form>
+   
+</body>
+</html>
+
+
+<?php 
+
+if(isset($_POST["login"])){
+
+    if(!empty($_POST["username"]) && !empty($_POST["password"]) ){
+
+    $_SESSION["username"] = $_POST["username"];
+    $_SESSION["password"] = $_POST["password"];
+
+
+    header("Location: home.php");
+ 
+}
+else{
+    echo "please input username/password";
 }
 
-// Test the function with different input values
-trinary_Test(32) ;
-trinary_Test(21);
-trinary_Test(12);
-trinary_Test(4);
+
+}
+
+
 ?>
