@@ -1,6 +1,18 @@
-
 <?php 
-   include("database.php")
+
+   include("database.php");
+
+   $username = "patrick";
+   $password = "12345";
+   $hash = password_hash($password, PASSWORD_DEFAULT);
+   
+   $sql = "INSERT INTO users (user, password)
+            VALUES ('$username','$hash')";
+
+   mysqli_query($conn,$sql);
+
+   mysqli_close($conn);
+
 ?> 
 
 <!DOCTYPE html>
@@ -16,4 +28,3 @@
    
 </body>
 </html>
-
