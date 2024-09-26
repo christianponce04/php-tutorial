@@ -11,7 +11,7 @@ if(  $conn = mysqli_connect($db_server,
                             $db_password,
                             $db_name))
                             {
-    echo"connected";
+    // echo"connected";
 }
     else{
         echo "not conneted";
